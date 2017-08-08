@@ -10,8 +10,9 @@ namespace YamlDotNet.Samples
     {
         public static void Main()
         {
+            string file_path = "..\\..\\config.yml";
             // Setup the input
-            var input = new StringReader(Document);
+            var input = new StreamReader(file_path, Encoding.Default);
 
             // Load the stream
             var yaml = new YamlStream();
@@ -31,9 +32,7 @@ namespace YamlDotNet.Samples
             foreach (YamlMappingNode item in items)
             {
                 Console.WriteLine(
-                    "{0}\t{1}",
-                    item.Children[new YamlScalarNode("part_no")],
-                    item.Children[new YamlScalarNode("descrip")]
+                    item.Children.Keys.ToString()
                 );
             }
             Console.ReadKey();

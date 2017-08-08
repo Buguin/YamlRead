@@ -6,14 +6,9 @@ customer:
 
 items:
     - part_no:   A4786
-      descrip:   Water Bucket (Filled)
-      price:     1.47
-      quantity:  4
-
-    - part_no:   E1628
-      descrip:   High Heeled ""Ruby"" Slippers
-      price:     100.27
-      quantity:  1
+    - descrip:   Water Bucket (Filled)
+    - price:     1.47
+    - quantity:  4
 
 bill-to:  &id001
     street: |
